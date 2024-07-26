@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:wght@400;700&display=swap');
+/* taking help from ClaudeAI */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Exo+2:wght@300;400;700&display=swap');
 
 :root {
     --primary-color: #ff00ff;
     --secondary-color: #00ffff;
-    --background-color: #1a1a2e;
+    --accent-color: #ff00aa;
+    --background-color: #0a0a1e;
     --text-color: #ffffff;
+    --card-bg-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -14,32 +19,38 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(10, 10, 30, 0.8);
     padding: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 nav ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     list-style-type: none;
+}
+
+nav li {
+    margin: 0 1rem;
 }
 
 nav a {
     color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
     transition: color 0.3s ease;
 }
 
@@ -61,8 +72,8 @@ section {
     text-align: center;
 }
 
-h1, h2 {
-    font-family: 'Bangers', cursive;
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -71,25 +82,100 @@ h1, h2 {
 h1 {
     font-size: 4rem;
     color: var(--primary-color);
-    text-shadow: 3px 3px var(--secondary-color);
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color), 0 0 30px var(--primary-color);
 }
 
 h2 {
     font-size: 3rem;
     color: var(--secondary-color);
-    text-shadow: 2px 2px var(--primary-color);
+    text-shadow: 0 0 10px var(--secondary-color), 0 0 20px var(--secondary-color);
+}
+
+.hero {
+    text-align: center;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 20px var(--secondary-color);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 20px var(--primary-color);
+}
+
+.about-text {
+    text-align: left;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill-card {
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
 
 .project-card {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 2rem;
+    background-color: var(--card-bg-color);
+    padding: 1.5rem;
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -97,6 +183,27 @@ h2 {
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 20px rgba(0, 255, 255, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--secondary-color);
 }
 
 form {
@@ -110,7 +217,7 @@ input, textarea, button {
     margin: 0.5rem 0;
     padding: 0.5rem;
     font-size: 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--card-bg-color);
     border: none;
     border-radius: 5px;
     color: var(--text-color);
@@ -126,10 +233,64 @@ button:hover {
     background-color: var(--secondary-color);
 }
 
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
 footer {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(10, 10, 30, 0.8);
     text-align: center;
     padding: 1rem;
 }
 
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+}
 
