@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comic Futuristic Portfolio</title>
+    <title>Ayush Mali - Comic Futuristic Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
     <header>
@@ -12,6 +13,7 @@
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -20,37 +22,97 @@
 
     <main>
         <section id="home">
-            <h1>Welcome to My Comic Future</h1>
-            <p>Exploring the realms of creativity and technology</p>
+            <div class="hero">
+                <h1>Ayush Mali</h1>
+                <p class="tagline">Futuristic Web Developer & Digital Artist</p>
+                <a href="#projects" class="cta-button">View My Work</a>
+            </div>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I'm a futuristic creator blending art and code</p>
+            <div class="about-content">
+                <img src="https://placeholder.com/300x300" alt="Zara Neon" class="profile-pic">
+                <div class="about-text">
+                    <p>Hey there! I'm Ayush, a web developer and digital artist with a passion for creating futuristic and visually stunning digital experiences. With a background in both design and coding, I bring a unique blend of creativity and technical skills to every project.</p>
+                    <p>When I'm not crafting websites or digital art, you can find me exploring virtual reality worlds, attending cyberpunk conventions, or tinkering with my home automation setup.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-skill="HTML5">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-card" data-skill="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-card" data-skill="JavaScript">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-card" data-skill="React">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-card" data-skill="Node.js">
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-card" data-skill="Python">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+            </div>
         </section>
 
         <section id="projects">
             <h2>My Projects</h2>
             <div class="project-grid">
-                <div class="project-card">Project 1</div>
-                <div class="project-card">Project 2</div>
-                <div class="project-card">Project 3</div>
+                <div class="project-card">
+                    <img src="https://placeholder.com/300x200" alt="Project 1">
+                    <h3>Neon City Explorer</h3>
+                    <p>An interactive web app showcasing a futuristic cityscape.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://placeholder.com/300x200" alt="Project 2">
+                    <h3>Cyberpunk Portfolio</h3>
+                    <p>A dynamic portfolio website with a cyberpunk theme.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+                <div class="project-card">
+                    <img src="https://placeholder.com/300x200" alt="Project 3">
+                    <h3>AI Art Generator</h3>
+                    <p>Web-based tool for creating AI-generated digital art.</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
             </div>
         </section>
 
         <section id="contact">
-            <h2>Contact Me</h2>
+            <h2>Get In Touch</h2>
             <form id="contact-form">
                 <input type="text" placeholder="Name" required>
                 <input type="email" placeholder="Email" required>
                 <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit">Send Message</button>
             </form>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Comic Futuristic Portfolio</p>
+        <p>&copy; 2024 Ayush Mali | Comic Futuristic Portfolio</p>
     </footer>
 
     <script src="script.js"></script>
